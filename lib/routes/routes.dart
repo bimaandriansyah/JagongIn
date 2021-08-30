@@ -1,7 +1,7 @@
 part of 'pages.dart';
 
 class AppRoutes {
-  static const INITIAL = AppPages.Home;
+  static const INITIAL = AppPages.Login;
 
   static final pages = [
     GetPage(name: _Paths.Splash, page: () => SplashPage()),
