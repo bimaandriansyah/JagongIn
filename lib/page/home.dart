@@ -1,6 +1,7 @@
 import 'Dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,20 +14,26 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double sizeHeigh = Get.height;
-    return Scaffold(
-      body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
-        child: Column(
-          children: [
-            HeaderHome(sizeHeigh: sizeHeigh),
-            BtnActionHome(),
-            SizedBox(height: kDefaultPadding),
-            DataCard(status: true),
-            DataCard(),
-          ],
-        ),
+    return AnnotatedRegion(
+      value: SystemUiOverlayStyle(
+        statusBarBrightness: Brightness.light,
+        statusBarIconBrightness: Brightness.light,
       ),
-      floatingActionButton: FloatingButton(),
+      child: Scaffold(
+        body: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          child: Column(
+            children: [
+              HeaderHome(sizeHeigh: sizeHeigh),
+              BtnActionHome(),
+              SizedBox(height: kDefaultPadding),
+              DataCard(status: true),
+              DataCard(),
+            ],
+          ),
+        ),
+        floatingActionButton: FloatingButton(),
+      ),
     );
   }
 }
