@@ -1,4 +1,4 @@
-package com.seovtech.jagongin
+package com.seovdetech.jagongin
 
 import io.flutter.embedding.android.FlutterActivity
 

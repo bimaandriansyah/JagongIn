@@ -5,7 +5,6 @@ import 'package:get/utils.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:jagongin_apps/constant/constant.dart';
 import 'package:get/get.dart';
-import 'package:jagongin_apps/page/home.dart';
 import 'package:jagongin_apps/routes/pages.dart';
 
 class LoginPage extends StatelessWidget {
