@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "935098125727",
+    "project_id": "jagongin-5d343",
+    "storage_bucket": "jagongin-5d343.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935098125727:android:5c86205097524648d681aa",
+        "android_client_info": {
+          "package_name": "com.seovdetech.jagongin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935098125727-tlsrm0tpcml4nc1436k38qumcnc3r4v3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.seovdetech.jagongin",
+            "certificate_hash": "e07fe9783844c2cb7c3f9b106a50cd27ee605c7b"
+          }
+        },
+        {
+          "client_id": "935098125727-5747ouk6oek5jh52gjiekepl6q08gbpq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA83kXizwQfQEOW-NQmT6oTNHVd8Fi53iY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935098125727-5747ouk6oek5jh52gjiekepl6q08gbpq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

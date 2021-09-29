@@ -5,10 +5,11 @@ import 'package:get/utils.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:jagongin_apps/constant/constant.dart';
 import 'package:get/get.dart';
+import 'package:jagongin_apps/controller/FirebaseController.dart';
 import 'package:jagongin_apps/routes/pages.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  final firebaseC = Get.find<FirebaseController>();
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +47,8 @@ class LoginPage extends StatelessWidget {
               Expanded(child: SizedBox()),
               ElevatedButton(
                   onPressed: () {
-                    Get.offNamed(AppPages.Home);
+                    // Get.offNamed(AppPages.Home);
+                    firebaseC.signInWithGoogle();
                   },
                   style: ElevatedButton.styleFrom(
                       padding:

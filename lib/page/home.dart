@@ -6,6 +6,7 @@ import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:jagongin_apps/constant/constant.dart';
+import 'package:jagongin_apps/controller/FirebaseController.dart';
 import 'package:jagongin_apps/routes/pages.dart';
 
 class HomePage extends StatelessWidget {
@@ -553,6 +554,8 @@ class HeaderHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final FirebaseController firebaseC = Get.find();
+
     return Container(
       margin: EdgeInsets.only(bottom: kDefaultPadding),
       height: sizeHeigh * 0.2,
@@ -597,9 +600,14 @@ class HeaderHome extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(40)),
-                  child: CircleAvatar(
-                      backgroundImage: NetworkImage(
-                          "https://raw.githubusercontent.com/abuanwar072/Plant-App-Flutter-UI/master/assets/images/image_3.png")),
+                  child: GestureDetector(
+                    onTap: () {
+                      firebaseC.logout();
+                    },
+                    child: CircleAvatar(
+                        backgroundImage: NetworkImage(
+                            "https://raw.githubusercontent.com/abuanwar072/Plant-App-Flutter-UI/master/assets/images/image_3.png")),
+                  ),
                 )
               ],
             ),
