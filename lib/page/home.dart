@@ -1,5 +1,6 @@
 import 'Dart:math';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
@@ -555,6 +556,9 @@ class HeaderHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final FirebaseController firebaseC = Get.find();
+    final User? user = firebaseC.auth.currentUser;
+    final String? username = user!.displayName;
+    final String? photoUrl = user.photoURL;
 
     return Container(
       margin: EdgeInsets.only(bottom: kDefaultPadding),
@@ -586,7 +590,7 @@ class HeaderHome extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Bima Andriansyah",
+                      username.toString(),
                       style: GoogleFonts.poppins(
                           fontSize: 20,
                           color: Colors.white,
@@ -605,8 +609,7 @@ class HeaderHome extends StatelessWidget {
                       firebaseC.logout();
                     },
                     child: CircleAvatar(
-                        backgroundImage: NetworkImage(
-                            "https://raw.githubusercontent.com/abuanwar072/Plant-App-Flutter-UI/master/assets/images/image_3.png")),
+                        backgroundImage: NetworkImage(photoUrl.toString())),
                   ),
                 )
               ],
